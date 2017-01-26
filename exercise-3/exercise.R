@@ -13,6 +13,7 @@ library("dplyr")
 
 # Require/library the fueleconomy package
 library(fueleconomy)
+vehicles <- as.data.frame(vehicles)
 
 # You should have have access to the vehicles data.frame
 View(vehicles)
@@ -24,7 +25,8 @@ View(vehicles)
 
 
 # Which Accura model has the best hwy MPG in 2015? (pipe operator)
-filter(vehicles, make == 'Accura') %>% 
+filter(vehicles, make == 'Acura') %>% max(vehicles$hwy)
+
 
 ### Bonus ###
 
